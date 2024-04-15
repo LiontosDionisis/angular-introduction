@@ -9,6 +9,7 @@ import { ComponentOutputExampleComponent } from './components/component-output-e
 import { TemplateDrivenFormExampleComponent } from './components/template-driven-form-example/template-driven-form-example.component';
 import { ReactiveFormExampleComponent } from './components/reactive-form-example/reactive-form-example.component';
 import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
 export const routes: Routes = [
     {path: "event-bind-example", component: EventBindExampleComponent},
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path: "", component: WelcomeComponent},
     {path: "template-driven-form-example", component: TemplateDrivenFormExampleComponent},
     {path: "reactive-form-example", component: ReactiveFormExampleComponent},
-    {path: "http-client-example", component: HttpClientExampleComponent}
+    {path: "http-client-example", component: HttpClientExampleComponent},
+    {path: "user-registration", component: UserRegistrationComponent}
 ];
