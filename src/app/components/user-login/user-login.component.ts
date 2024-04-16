@@ -31,6 +31,11 @@ export class UserLoginComponent {
         localStorage.setItem("access_token", access_token);
         const decodedTokenSubject = jwtDecode(access_token).sub as unknown as LoggedInUser;
 
+        this.userService.user.set({
+          fullname: decodedTokenSubject.fullname,
+          email: decodedTokenSubject.email
+        });
+
         this.router.navigate(["restricted-content"])
       },
       error: (response) => {
