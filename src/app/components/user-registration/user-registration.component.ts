@@ -64,4 +64,19 @@ export class UserRegistrationComponent {
       message: "Not attempted yet"
     };
   }
+
+  checkDuplicateEmail() {
+    const email = this.form.get("email").value;
+    this.userService.checkDuplicateEmail(email).subscribe({
+      next: (response) => {
+        console.log(response.msg);
+        this.form.get("email").setErrors(null);
+      },
+      error: (response) => {
+        const message = response.error.msg;
+        console.log(message);
+        this.form.get("email").setErrors({duplicateEmail: true})
+      }
+    });
+  }
 }
