@@ -14,6 +14,12 @@ import { RestrictedContentExampleComponent } from './components/restricted-conte
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { authGuard } from './shared/guards/auth.guard';
 import { FunForNerdsComponent } from './components/fun-for-nerds/fun-for-nerds/fun-for-nerds.component';
+import { ɵdetectChangesInViewIfRequired } from '@angular/core';
+import { CrudDashboardComponent } from './components/crud/crud-dashboard/crud-dashboard.component';
+import { CrudCreateExampleComponent } from './components/crud/crud-create-example/crud-create-example.component';
+import { CrudReadExampleComponent } from './components/crud/crud-read-example/crud-read-example.component';
+import { CrudUpdateExampleComponent } from './components/crud/crud-update-example/crud-update-example.component';
+import { CrudDeleteExampleComponent } from './components/crud/crud-delete-example/crud-delete-example.component';
 
 
 export const routes: Routes = [
@@ -29,5 +35,10 @@ export const routes: Routes = [
     {path: "user-registration", component: UserRegistrationComponent},
     {path: "restricted-content", component: RestrictedContentExampleComponent, canActivate: [authGuard]},
     {path: "login", component: UserLoginComponent},
-    {path:'fun-for-nerds', component: FunForNerdsComponent}
+    {path:'fun-for-nerds', component: FunForNerdsComponent},
+    {path: "crud-dashboard", component: CrudDashboardComponent},
+    {path: "crud-example/create", component: CrudCreateExampleComponent},
+    {path: "crud-example/read", component: CrudReadExampleComponent},
+    {path: "crud-example/update", component: CrudUpdateExampleComponent},
+    {path: "crud-example/delete", component: CrudDeleteExampleComponent}
 ];

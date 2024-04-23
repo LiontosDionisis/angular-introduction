@@ -22,6 +22,7 @@ export class ListGroupMenuComponent {
     {text: "User Registration", routerLink: "/user-registration"},
     {text: "Restricted Content Example", routerLink: "/restricted-content"},
     {text: "User Sign in", routerLink: "/login"},
-    {text: "Fun For Nerds Game", routerLink: "/fun-for-nerds"}
+    {text: "Fun For Nerds Game", routerLink: "/fun-for-nerds"},
+    {text: "CRUD", routerLink: "/crud-dashboard"}
   ];
 }
