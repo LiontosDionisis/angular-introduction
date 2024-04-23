@@ -21,6 +21,7 @@ export class ListGroupMenuComponent {
     {text: "Http Client Example", routerLink: "/http-client-example"},
     {text: "User Registration", routerLink: "/user-registration"},
     {text: "Restricted Content Example", routerLink: "/restricted-content"},
-    {text: "User Sign in", routerLink: "/login"}
+    {text: "User Sign in", routerLink: "/login"},
+    {text: "Fun For Nerds Game", routerLink: "/fun-for-nerds"}
   ];
 }
