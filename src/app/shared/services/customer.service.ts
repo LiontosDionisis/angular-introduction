@@ -1,0 +1,19 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
+import { Customer } from '../interfaces/customer';
+import { environment } from 'src/environments/environment';
+
+const apiUrl = `${environment.apiURL}/customer`;
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CustomerService {
+  
+
+  http: HttpClient = inject(HttpClient);
+  
+  createCustomer(customer: Customer) {
+    return this.http.post<{msg: string}>(`${apiUrl}/create`, customer);
+  }
+}
